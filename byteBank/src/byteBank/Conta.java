@@ -4,9 +4,9 @@ public class Conta {
 	double saldo;
 	int agencia;
 	int numero;
-	String titular;
+	Cliente titular;
 	
-	public Conta(int agencia, int numero, String titular) {
+	public Conta(int agencia, int numero, Cliente titular) {
 		this.agencia = agencia;
 		this.numero = numero;
 		this.titular = titular;
@@ -29,7 +29,7 @@ public class Conta {
 
 	public void meMostra() {
 		System.out.println("Agência: " + this.agencia);
-		System.out.println("Titular: " + this.titular);
+		System.out.println("Titular: " + this.titular.nome);
 		System.out.println("Numero: " + this.numero);
 		System.out.println("Saldo: " + this.saldo);
 	}

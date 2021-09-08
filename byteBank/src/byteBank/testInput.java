@@ -8,14 +8,16 @@ public class testInput {
 		Scanner input = new Scanner(System.in);
 
 		
-		String titular = input.nextLine(); 
+		String nome = input.nextLine(); 
 		int agencia = input.nextInt();
 		int numero = input.nextInt();
 		double primeiroDeposito = input.nextDouble();
 		
+		Cliente cliente = new Cliente(nome, "","");
+		
 		input.close();
 		
-		Conta conta = new Conta(agencia, numero, titular);
+		Conta conta = new Conta(agencia, numero, cliente);
 		
 		conta.meMostra();
 		
