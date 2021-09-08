@@ -6,8 +6,8 @@ public class Conta {
 	private int numero;
 	private Cliente titular;
 	
-	public Conta(int agencia, int numero, Cliente titular) {
-		this.agencia = agencia;
+	public Conta(int agencia, int numero, Cliente titular) throws Exception {
+		this.setAgencia(agencia);
 		this.numero = numero;
 		this.titular = titular;
 	}
@@ -50,8 +50,11 @@ public class Conta {
 		return agencia;
 	}
 
-	public void setAgencia(int agencia) {
-		this.agencia = agencia;
+	public void setAgencia(int agencia) throws Exception {
+		if (agencia > 0 && agencia < 100)
+			this.agencia = agencia;
+		else
+			throw new Exception("Agência não existe");
 	}
 
 	public int getNumero() {

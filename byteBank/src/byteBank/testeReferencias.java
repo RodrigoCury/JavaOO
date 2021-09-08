@@ -2,7 +2,7 @@ package byteBank;
 
 public class testeReferencias {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		
 		Cliente cliente1 = new Cliente("Cliente 1", "","");
 		Cliente cliente2 = new Cliente("Cliente 2", "","");
