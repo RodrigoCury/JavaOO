@@ -3,14 +3,11 @@ package byteBank;
 public class criaConta {
 
 	public static void main(String[] args) {
-		
-		Cliente rodrigo = new Cliente("Rodrigo", "111.222.333-44", "Programador");
-		Cliente luigi = new Cliente("Luigi", "111.222.333-44", "Programador");
-		
-		Conta contaRodrigo = new Conta(146, 1, rodrigo);
+				
+		Conta contaRodrigo = new Conta(146, 1, new Cliente("Rodrigo", "111.222.333-44", "Programador"));
 		contaRodrigo.depositar(200);
 		
-		Conta contaLuigi = new Conta(146, 2, luigi);		
+		Conta contaLuigi = new Conta(146, 2, new Cliente("Luigi", "111.222.333-44", "Programador"));		
 		
 		contaRodrigo.transfere(200, contaLuigi);
 		
