@@ -1,6 +1,7 @@
 package byteBank;
 
 public class Conta {
+	static int totalDeContas = 0;
 	private double saldo = 0;
 	private int agencia;
 	private int numero;
@@ -10,6 +11,7 @@ public class Conta {
 		this.setAgencia(agencia);
 		this.numero = numero;
 		this.titular = titular;
+		totalDeContas++;
   }	
   
 	public double getSaldo() {
