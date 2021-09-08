@@ -10,8 +10,8 @@ public class Conta {
 		this.setAgencia(agencia);
 		this.numero = numero;
 		this.titular = titular;
-	}
-	
+  }	
+  
 	public double getSaldo() {
 		return this.saldo;
 	}
