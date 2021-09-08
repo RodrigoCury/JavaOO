@@ -1,7 +1,7 @@
 package byteBank;
 
 public class Conta {
-	static int totalDeContas = 0;
+	private static int totalDeContas = 0;
 	private double saldo = 0;
 	private int agencia;
 	private int numero;
@@ -69,5 +69,9 @@ public class Conta {
 
 	public Cliente getTitular() {
 		return titular;
+	}
+
+	public static int getTotalDeContas() {
+		return totalDeContas;
 	}
 }
