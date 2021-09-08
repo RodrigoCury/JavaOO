@@ -1,15 +1,19 @@
 package byteBank;
 
 public class Conta {
-	double saldo = 0.0;
-	int agencia;
-	int numero;
-	Cliente titular;
+	private double saldo = 0;
+	private int agencia;
+	private int numero;
+	private Cliente titular;
 	
-	public Conta(int agencia, int numero, Cliente titular) {
-		this.agencia = agencia;
+	public Conta(int agencia, int numero, Cliente titular) throws Exception {
+		this.setAgencia(agencia);
 		this.numero = numero;
 		this.titular = titular;
+  }	
+  
+	public double getSaldo() {
+		return this.saldo;
 	}
 
 	public boolean sacar(double valorASerSacado) {
@@ -28,7 +32,7 @@ public class Conta {
 
 	public void meMostra() {
 		System.out.println("Agência: " + this.agencia);
-		System.out.println("Titular: " + this.titular.nome);
+		System.out.println("Titular: " + this.titular.getNome());
 		System.out.println("Numero: " + this.numero);
 		System.out.println("Saldo: " + this.saldo);
 	}
@@ -40,5 +44,28 @@ public class Conta {
 			return true;
 		}
 		return false;
+	}
+
+	public int getAgencia() {
+		return agencia;
+	}
+
+	public void setAgencia(int agencia) throws Exception {
+		if (agencia > 0 && agencia < 100)
+			this.agencia = agencia;
+		else
+			throw new Exception("Agência não existe");
+	}
+
+	public int getNumero() {
+		return numero;
+	}
+
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+
+	public Cliente getTitular() {
+		return titular;
 	}
 }
