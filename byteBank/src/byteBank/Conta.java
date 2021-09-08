@@ -1,7 +1,7 @@
 package byteBank;
 
 public class Conta {
-	double saldo;
+	double saldo = 0;
 	int agencia;
 	int numero;
 	Cliente titular;
@@ -10,7 +10,6 @@ public class Conta {
 		this.agencia = agencia;
 		this.numero = numero;
 		this.titular = titular;
-		this.saldo = 0;
 	}
 
 	public boolean sacar(double valorASerSacado) {
